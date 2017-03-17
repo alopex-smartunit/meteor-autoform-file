@@ -24,7 +24,13 @@
         &nbsp;
         <span class="progress">{{progress.get}}%</span>
       {{else}}
-        <input data-files-collection-upload class="form-control af-file-upload-capture" type="file" />
+        <div style="display: flex;">
+          <input class="form-control" placeholder="Файл не задан" style="width: 100%;" />
+          <input data-files-collection-upload type="file" class="form-control af-file-upload-capture"
+            style="position: absolute; left: 0; top: 0; width: 100%; opacity: 0; cursor: pointer; z-index: 1000;"
+          />
+          <a class="btn" title="Загрузить постер"><i class="glyphicon glyphicon-save"></i></a>
+        </div>
       {{/with}}
     {{/if}}
   {{/with}}
